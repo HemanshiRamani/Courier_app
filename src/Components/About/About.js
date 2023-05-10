@@ -5,7 +5,7 @@ import team1 from "../image/team1.jpeg";
 
 const About = () => {
   return (
-    // 
+  
     <> 
       <div className="aboutmain">
         <div className="about">
