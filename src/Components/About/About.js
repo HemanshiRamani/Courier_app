@@ -5,7 +5,8 @@ import team1 from "../image/team1.jpeg";
 
 const About = () => {
   return (
-    <>
+    // 
+    <> 
       <div className="aboutmain">
         <div className="about">
           <Typography.Title className="t1">Meet our team</Typography.Title>
