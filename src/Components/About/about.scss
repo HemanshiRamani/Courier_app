@@ -1,0 +1,76 @@
+.aboutmain {
+  justify-content: center;
+  min-height: 100vh;
+  color: #454545;
+  font-weight: 300;
+  .about {
+    .t1 {
+      text-transform: uppercase;
+      color: rgb(35, 35, 152);
+      font-weight: 500px;
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 180px;
+      margin-bottom: 80px;
+    }
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 21px 426px;
+    .column {
+      position: relative;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding: 0px 36px;
+      // width: 100%;
+      // flex: 0 0 100%;
+      // max-width: 100%;
+      .team {
+        margin-bottom: 30px;
+        .team_img {
+          position: relative;
+          font-size: 0;
+          text-align: center;
+          .team1 {
+            height: 200px;
+            width: auto;
+            border-radius: 100%;
+            border: 20px solid #f3f4fa;
+          }
+        }
+        .team_content {
+          text-align: center;
+          background: #f3f4fa;
+          border-radius: 10px;
+          margin-top: -109px;
+          padding: 85px 30px 54px 24px;
+          .title {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
+              serif;
+            letter-spacing: 1px;
+          }
+          .title2 {
+            font-size: 20px;
+            font-weight: 300;
+            color: #aca5a5 !important;
+            letter-spacing: 1px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          }
+          .text {
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}

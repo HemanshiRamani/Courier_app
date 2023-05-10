@@ -1,0 +1,134 @@
+$color: rgb(52, 52, 132);
+$font: 18px;
+.bgmethod {
+  z-index: 1;
+  // background-color: rgb(213, 215, 218) !important;
+    // height: auto !important;
+  .method {
+    .t1 {
+      color: rgb(35, 35, 152);
+      font-weight: 500px;
+      font-size: 40px;
+      position: relative;
+      top: 45px;
+      line-height: 1.2;
+    }
+  }
+  .method2 {
+    margin: 120px 90px;
+    display: flex;
+    .road {
+      height: 377px;
+      width: 579px;
+    }
+    .first {
+      .byroad {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        bottom: 42px;
+        left: 456px;
+      }
+    }
+    .paragraph {
+      .para {
+        color: $color;
+        font-size: $font;
+        margin-left: 489px;
+        padding-top: 86px;
+      }
+    }
+  }
+  .method3 {
+    .methodair {
+      float: right;
+      margin: 0px 94px;
+      margin-top: -62px;
+      .air {
+        float: right;
+        height: 377px;
+        width: 579px;
+      }
+    }
+    .paragraph2 {
+      .para2 {
+        color: $color;
+        font-size: 18px;
+        margin-right: 762px;
+        padding-top: 48px;
+        margin-left: 96px;
+      }
+    }
+    .second {
+      .byair {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        top: 97px;
+        left: 645px;
+        float: right;
+      }
+    }
+  }
+  .method4 {
+    .methodship {
+      float: left;
+      margin: 120px 90px;
+      margin-top: 212px;
+      .ship {
+        height: 377px;
+        width: 579px;
+      }
+    }
+    .paragraph3 {
+      .para3 {
+        color: $color;
+        font-size: $font;
+        margin-right: 123px;
+        padding-top: 331px;
+      }
+    }
+    .third {
+      .byship {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        top: 31px;
+        right: 727px;
+      }
+    }
+  }
+  .method5 {
+    .methodtrain {
+      float: right;
+      margin: 120px 90px;
+      .train {
+        height: 377px;
+        width: 579px;
+      }
+    }
+    .paragraph4 {
+      .para4 {
+        color: $color;
+        font-size: 18px;
+        margin-right: 762px;
+        padding-top: 221px;
+        margin-left: 130px;
+      }
+    }
+    .fourth {
+      .bytrain {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        top: 74px;
+        left: 634px;
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://img.freepik.com/premium-vector/circle-world_46706-399.jpg");
+  background-size: cover;
+  .landing {
+    // background-color: #06649b !important;
+    background-color: rgb(12, 12, 38);
+    height: 70px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    color: white !important;
+    z-index: 999 !important;
+    .logo {
+      float: left;
+      .title {
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-weight: bold;
+        margin: 16px 60px;
+        color: white;
+      }
+    }
+    .header {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      position: relative;
+      bottom: 18px;
+      .home {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px;
+      }
+      .home:hover {
+        color: orange;
+      }
+      .service {
+        position: relative;
+        top: 23px;
+        @extend .home;
+      }
+      .contact {
+        position: relative;
+        @extend .home;
+      }
+      .about {
+        @extend .home;
+      }
+      .feedback {
+        @extend .home;
+      }
+    }
+  }
+
+  .landing2 {
+    .first {
+      .title2 {
+        color: white;
+        font-weight: bold;
+        position: relative;
+        left: 190px;
+        bottom: 115px;
+      }
+    }
+    .second {
+      .title3 {
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+        position: relative;
+        left: 152px;
+        bottom: 70px;
+      }
+    }
+  }
+  .landing3 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 90px;
+    right: 380px;
+    .second {
+      .track {
+        border-radius: 2px;
+        border: 2px solid black;
+        width: 300px;
+        line-height: 50px;
+        margin-top: 40px;
+        font-size: 30px;
+        font-weight: bold;
+        color: cadetblue;
+        background-color: white;
+        text-decoration: none;
+        padding: 9px 27px;
+      }
+      .track:hover{
+        color: rgb(218, 56, 164);
+      }
+    }
+  }
+}

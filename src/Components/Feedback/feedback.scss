@@ -1,0 +1,22 @@
+.mainfeed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://www.callcentrehelper.com/images/stories/2020/01/holding-star-760.jpg");
+  background-size: cover;
+  .form {
+    background-color: rgba(255, 255, 255, 0.33);
+    box-shadow: 0px 8px 32px 0 rgba(0, 0, 255, 0.33);
+    backdrop-filter: blur(3px);
+    padding: 27px 83px 18px 66px;
+    border-radius: 16px;
+    .review {
+      font-size: 40px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      position: relative;
+      bottom: 23px;
+    }
+  }
+}

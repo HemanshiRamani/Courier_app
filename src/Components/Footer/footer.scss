@@ -1,0 +1,25 @@
+$font : 30px;
+.main_footer{
+    // background-color: grey;
+    // padding: 98px 47px 79px 41px;
+    .footer{
+        padding-top: 77px;
+        .column{
+            // background-color: rgba(153, 136, 136, 0.2);
+            background-color: rgba(111, 101, 229, 0.2);
+            padding: 90px 20px;
+            .icon{
+                font-size: $font;
+                padding: 32px;
+                color: black;
+            }
+        }
+    }
+    .content{
+        margin-top: -52px;
+        .f1{
+            font-size: 18px;
+            color: rgb(35, 35, 152);
+        }
+    }
+}
