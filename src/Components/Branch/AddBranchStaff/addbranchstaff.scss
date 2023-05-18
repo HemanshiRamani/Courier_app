@@ -1,0 +1,118 @@
+.add_staff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100w;
+    height: 100vh;
+    background: rgb(222, 231, 231);
+    background-size: cover;
+    .img{
+        margin-bottom: 45pc;
+        margin-left: 23px;
+        .home{
+            width: 60px;
+        }
+    }
+    .Form {
+        background-color: #FFFFFF;
+        box-shadow: 0px 8px 32px 0 rgba(0, 0, 255, 0.33);
+        backdrop-filter: blur(3px);
+        padding: 87px 226px 47px 338px;
+        border-radius: 30px;
+        .title {
+            position: relative;
+            bottom: 61px;
+            right: 56px;
+            color: #344767;
+            font-size: 35
+            px
+        }
+        .list {
+            right: 283px;
+            font-weight: bold;
+            .staffname {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+        .li {
+            left: 6pc;
+            bottom: 54px;
+            position: relative;
+            left: 199px;
+            font-weight: bold;
+            .staff_email
+             {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+        .bname {
+            right: 315px;
+            position: relative;
+            bottom: 27px;
+            margin-left: 32px;
+            font-weight: bold;
+            .branch_name {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+        .address {
+            left: 6pc;
+            bottom: 79px;
+            position: relative;
+            left: 198px;
+            font-weight: bold;
+            .staff_address {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+        .scity {
+            right: 265px;
+            position: relative;
+            bottom: 52px;
+            font-weight: bold;
+            .City {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+        .contact {
+            bottom: 107px;
+            position: relative;
+            left: 188px;
+            font-weight: bold;
+            .snumber {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+        .button {
+            .btn {
+                background: linear-gradient(135deg, #D49D5E, #EC4B46);
+                /* padding: 5px; */
+                width: 415px;
+                bottom: 34px;
+                right: 36px;
+                color: white;
+                text-transform: uppercase;
+                font-size: 17px;
+            }
+        }
+    }
+}
+

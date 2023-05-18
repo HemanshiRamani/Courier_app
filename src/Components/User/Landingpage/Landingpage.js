@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Typography} from "antd";
 import "./landingpage.scss";
+import Ourservice from "../Ourservice/Ourservice";
+import About from '../../About/About'
+import Contactus from '../../Contactus/Contactus'
+import Feedback from '../../Feedback/Feedback'
+import Method from '../Method/Method'
+import Footer from '../../Footer/Footer'
 
 const Landingpage = () => {
   return (
@@ -23,7 +29,7 @@ const Landingpage = () => {
             </Link>
             <Link className="about" to="/about">
               About Us
-            </Link>
+            </Link>-
             <Link className="feedback" to="/feedback">
               FeedBack
             </Link>
@@ -45,6 +51,25 @@ const Landingpage = () => {
           </div>
         </div>
       </div>
+
+      <section>
+        <section id="services">
+          <Ourservice/>
+        </section>
+        <Method/>
+        <section id="contact">
+          <Contactus/>
+        </section>
+
+        <section id="team">
+          <About/>
+        </section>
+
+        <section id="feedback">
+          <Feedback/>
+        </section>
+        <Footer/>
+      </section>
     </>
   );
 };

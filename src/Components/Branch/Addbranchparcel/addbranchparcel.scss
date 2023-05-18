@@ -1,0 +1,110 @@
+// .mainadd{
+//     box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.15);
+//     border-radius: 5px;
+//     padding: 188px 156px 174px 160px;
+//     margin: 7px 292px;
+//     width: 57% !important;
+//     height: 65%;
+//     margin-top: 150px;
+//     .parcel{
+//         justify-content: center;
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: space-between;
+//         .add_title{
+//             font-size: 35px;
+//             color: #344767;
+//             position: relative;
+//             bottom: 169px;
+//             font-weight: 600;
+//             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+//         }
+//         .form_item{
+//             font-size: 20px;
+//             color: red;
+//         }
+//         .input{
+//             background-color: #f6f6f6;
+//             color: #0d0d0d;
+//             padding: 12px 32px;
+//             text-align: center;
+//             text-decoration: none;
+//             display: inline-block;
+//             margin: 5px;
+//         }
+//     }
+// }
+
+body {
+  display: flex;
+  height: 100vh;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.mainadd {
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 73px;
+  border-radius: 5px;
+  .parcel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .add_title {
+      font-size: 35px;
+      font-weight: 500;
+      position: relative;
+      bottom: 30px;
+      margin-left: 293px;
+    }
+    .add_title::before {
+      content: "";
+      position: absolute;
+      top: 45px;
+      height: 3px;
+      width: 260px;
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    label {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      height: 32px;
+      color: #566787;
+      font-size: 16px;
+      margin-top: 17px;
+    }
+    .input {
+      height: 45px;
+      width: 122%;
+      margin-top: 12px;
+    }
+    .input2 {
+      margin-top: 16px;
+    }
+    .link {
+      width: 222px;
+      height: 40px;
+      .close {
+        color: black;
+        font-size: 40px;
+        margin-right: 151px;
+        margin-top: 10px;
+      }
+    }
+    .aparcel {
+      background: linear-gradient(135deg, #d49d5e, #ec4b46);
+      padding: 10px 168px 33px;
+      margin-top: 5%;
+      margin-right: 63%;
+      margin-left: 28%;
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

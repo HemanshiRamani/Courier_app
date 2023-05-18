@@ -1,0 +1,57 @@
+$color: #344767;
+$font: 22px;
+$weight: bold;
+
+.branchinfo {
+  height: 100vh;
+  padding: 10px;
+  background: #dcebf5;
+  .info {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 251px;
+    height: 25%;
+    margin-top: 65px;
+    display: flex;
+    .text {
+      color: $color;
+      font-size: $font;
+      font-weight: $weight;
+      padding-top: 23pc;
+      margin-left: 157px;
+    }
+  }
+  .info2 {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    margin-top: 65px;
+    display: flex;
+    margin-left: 115px;
+
+    .text2 {
+      color: $color;
+      font-size: $font;
+      font-weight: $weight;
+      margin-top: 361px;
+      margin-left: 138px;
+    }
+  }
+  .card{
+    margin: 20px;
+    display: inline-block;
+    height: 13%;
+    width: 16%;
+    margin-top: 78px;
+    margin-right: 44px;
+  }
+  .card2{
+    margin: 20px;
+    display: inline-block;
+    height: 13%;
+    width: 16%;
+    margin-top: 58px;
+    margin-right: 44px;
+}
+}

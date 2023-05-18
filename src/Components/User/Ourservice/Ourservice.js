@@ -1,6 +1,7 @@
 import { Typography, Row, Col, Image, List } from 'antd';
 import React from 'react'
 import bg from "../../image/bg.jpg";
+import Method from '../Method/Method';
 import "./ourservice.scss";
 
 const Ourservice = () => {
@@ -44,6 +45,7 @@ const Ourservice = () => {
             </Row>
         </div>
     </div>
+
    </>
   )
 }
