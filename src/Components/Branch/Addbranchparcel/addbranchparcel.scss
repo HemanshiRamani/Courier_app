@@ -5,11 +5,13 @@
 }
 .form1 {
   border: 2px solid;
-  width: 60%;
-  margin-left: 473px;
+  width: 38%;
+  margin-left: 602px;
   margin-top: 61px;
   .inputfield {
     width: 200px;
+    margin-left: 85px;
+    margin-top: 49px;
     .addParagraph {
       font-size: 20px;
       margin-top: 20px;
@@ -43,19 +45,24 @@
     }
   }
   .icon {
+    margin-left: 34pc;
     .close {
       font-size: 40px;
+      color: red;
+      position: relative;
+    bottom: 46px;
     }
   }
   .link {
-    margin-left: 20px;
+    margin-left: 165px;
     margin-top: 10px;
     margin-bottom: 20px;
     .addbtn {
       background: linear-gradient(135deg, #d49d5e, #ec4b46);
       padding-bottom: 36px;
       text-transform: uppercase;
-      padding: 10px 168px 33px;
+      padding: 10px 130px 33px;
+      color: white;
     }
   }
 }
