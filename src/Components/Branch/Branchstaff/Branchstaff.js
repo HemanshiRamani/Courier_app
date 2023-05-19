@@ -60,7 +60,7 @@ const Branchstaff = () => {
         <div className="col">
           <Table columns={columns} />
         </div>
-        <Branchdash/>
+        <Branchdash />
       </div>
     </>
   );

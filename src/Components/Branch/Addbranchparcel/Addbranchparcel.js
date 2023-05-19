@@ -7,6 +7,7 @@ import Branchdash from "../Branchdash/Branchdash";
 const Addbranchparcel = () => {
   return (
     <>
+    <div className="bg">
       <Typography.Title className="parceldetail">
         Add Parcel Detail
       </Typography.Title>
@@ -150,6 +151,7 @@ const Addbranchparcel = () => {
           <Button className="addbtn">Add Parcel</Button>
         </div>
       </Form>
+      </div>
       <div>
         <Branchdash />
       </div>
