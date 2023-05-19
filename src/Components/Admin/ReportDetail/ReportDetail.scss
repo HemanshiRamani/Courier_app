@@ -1,9 +1,9 @@
 .report {
-  // background: rgb(214, 234, 234);
 
   .reportdetail {
-    position: relative;
-    left: 20%;
+    // padding: 10px;
+    height: 6pc;
+    background-color: white;
 
     .Reports {
       margin-right: 94pc;
@@ -47,5 +47,30 @@
       left: 18px;
       font-size: 18px;
     }
+    .option {
+      margin-top: -16px;
+      margin-left: -66pc;
+      .text {
+        color: #566787;
+        font-size: 15px;
+        margin-left: 55%;
+      }
+    }
+    .cal {
+      margin-left: 52pc;
+      position: relative;
+      bottom: 33px
+    }
+  }
+  .button{
+    margin-top: -63px;
+    margin-left: 69pc;
+    .preport{
+      color: black;
+      background-color: #d2572a;
+      padding: 5px 12px 23px;
+      margin-left: 34%;
+    }
   }
 }
+
