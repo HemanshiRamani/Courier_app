@@ -1,0 +1,51 @@
+.report {
+  // background: rgb(214, 234, 234);
+
+  .reportdetail {
+    position: relative;
+    left: 20%;
+
+    .Reports {
+      margin-right: 94pc;
+      position: relative;
+      top: 39px;
+    }
+  }
+
+  .link {
+    // ext-align: initial;
+
+    margin: 43px;
+    margin-left: 16%;
+    border: 2px solid;
+    width: 79%;
+    height: 54px;
+    margin-left: 17%;
+    border-left: 3px solid orangered;
+
+    .user {
+      position: relative;
+      top: 14px;
+      left: 18px;
+      font-size: 18px;
+    }
+  }
+
+  .BranchReport {
+
+    margin: 43px;
+    margin-left: 16%;
+    border: 2px solid;
+    width: 79%;
+    height: 54px;
+    margin-left: 17%;
+    border-left: 3px solid orangered;
+
+    .branch {
+      position: relative;
+      top: 14px;
+      left: 18px;
+      font-size: 18px;
+    }
+  }
+}

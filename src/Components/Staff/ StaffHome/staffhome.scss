@@ -1,0 +1,168 @@
+.sh {
+    background: #232427;
+    padding: 11px 3px 700px;
+
+    .staffhome {
+
+        .link {
+
+            .icon {
+                float: right;
+                width: 50px;
+                height: 23px;
+                margin: 20px;
+                color: white;
+            }
+        }
+
+        .icon {
+            .belloutlined {
+                float: right;
+                width: 10px;
+                margin-left: 25px;
+                margin: 20px;
+                color: white;
+
+            }
+        }
+
+        .title {
+            padding: 95px;
+            color: blue;
+
+            margin-right: 44px;
+
+        }
+    }
+
+    .stfcon {
+        background: #2a2b2f;
+        top: -51px;
+        width: 383px;
+        height: 403px;
+        margin-left: 10%;
+        position: relative;
+        background: #2a2b2f;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+
+        .profile {
+            position: relative;
+            bottom: 156px;
+            color: white;
+            left: 99px;
+            font-size: 21px;
+            font-weight: bold;
+
+        }
+
+        .form {
+            label {
+                color: #d52c2c;
+                margin-right: 156px;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    .sh1 {
+
+        background: #2a2b2f;
+        top: -452px;
+        width: 383px;
+        height: 403px;
+        float: right;
+        margin-right: 44%;
+        position: relative;
+        background: #2a2b2f;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .activity {
+            color: white;
+            font-size: 21px;
+            margin-bottom: 235px;
+            font-weight: bold;
+            margin-left: 14px;
+            position: relative;
+            left: 92px;
+        }
+
+        .newparcel {
+            bottom: 27px;
+            background: #d04848;
+            // right: 33px;
+            left: 4px;
+
+        }
+
+        .parcelhistory {
+            background: #23c186;
+            right: 109px;
+            top: 51px;
+        }
+    }
+
+    .sh2 {
+        background: #2a2b2f;
+        top: -854px;
+        width: 383px;
+        height: 403px;
+        float: right;
+        margin-right: 18%;
+        position: relative;
+        background: #2a2b2f;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .row {
+            .text {
+                // margin-bottom: 217px;
+                // margin-left: 109px;
+                margin-bottom: 72px;
+                margin-left: 106px;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .para {
+                position: relative;
+                bottom: 39px;
+                padding-left: 53px;
+                padding-right: 47px;
+                color: #79dcfa;
+                font-size: 14px;
+            }
+
+            .para2 {
+                /* margin-bottom: 32px; */
+                position: relative;
+                bottom: 19px;
+                color: #79dcfa;
+                padding-right: 52px;
+                padding-left: 68px;
+            }
+
+            .para3 {
+                position: relative;
+                bottom: 1px;
+                color: #79dcfa;
+                padding-right: 55px;
+                padding-left: 67px;
+            }
+        }
+    }
+
+}

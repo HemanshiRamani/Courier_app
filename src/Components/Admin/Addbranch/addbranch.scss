@@ -1,0 +1,124 @@
+.Addbranch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100w;
+    height: 100vh;
+    background: none;
+    background-size: cover;
+    margin-left: 16%;
+    background: rgb(214, 234, 234);
+
+    .Form {
+        background-color: #ffffff;
+        box-shadow: 0px 8px 32px 0 rgba(0, 0, 255, 0.33);
+        backdrop-filter: blur(3px);
+        padding: 87px 226px 47px 338px;
+        border-radius: 30px;
+
+        .title {
+            position: relative;
+            bottom: 61px;
+            right: 56px;
+        }
+
+        .list {
+            right: 283px;
+            font-weight: bold;
+
+            .branchname {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+
+            }
+        }
+
+        .li {
+            left: 6pc;
+            bottom: 54px;
+            position: relative;
+            left: 199px;
+            font-weight: bold;
+
+            .BranchAddress {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+
+        .Address {
+            right: 315px;
+            position: relative;
+            bottom: 27px;
+            margin-left: 32px;
+            font-weight: bold;
+
+            .ContactNumber {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+
+        .bemail {
+            left: 6pc;
+            bottom: 79px;
+            position: relative;
+            left: 204px;
+            font-weight: bold;
+
+            .BranchEmail {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+
+        .bcity {
+            right: 248px;
+            position: relative;
+            bottom: 52px;
+            font-weight: bold;
+
+            .City {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+            }
+        }
+
+        .bzip {
+            left: 6pc;
+            bottom: 107px;
+            position: relative;
+            left: 217px;
+            font-weight: bold;
+
+            .ZipCode {
+                .input {
+                    height: 27px;
+                    width: 289px;
+                }
+
+            }
+        }
+
+        .button {
+            .btn {
+                background: linear-gradient(135deg, #d49d5e, #ec4b46);
+                /* padding: 5px; */
+                width: 415px;
+                bottom: 34px;
+                right: 36px;
+
+            }
+        }
+    }
+}
