@@ -10,7 +10,7 @@ $weight: bold;
     background-color: #fff;
     border-radius: 10px;
     width: 30%;
-    margin-left: 251px;
+    margin-left: 467px;
     height: 25%;
     margin-top: 65px;
     display: flex;
@@ -28,7 +28,7 @@ $weight: bold;
     width: 30%;
     margin-top: 65px;
     display: flex;
-    margin-left: 115px;
+    margin-left: 152px;
 
     .text2 {
       color: $color;
@@ -43,8 +43,9 @@ $weight: bold;
     display: inline-block;
     height: 13%;
     width: 16%;
-    margin-top: 78px;
-    margin-right: 44px;
+    margin-top: 91px;
+    position: relative;
+    left: 24%;
   }
   .card2{
     margin: 20px;
@@ -52,6 +53,7 @@ $weight: bold;
     height: 13%;
     width: 16%;
     margin-top: 58px;
-    margin-right: 44px;
+    position: relative;
+    left: 24%;
 }
 }

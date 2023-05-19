@@ -1,18 +1,22 @@
 .reportdetail {
+  background: rgb(214, 234, 234);
+  padding: 10px;
+  height: 56pc;
   .Reports {
     margin-right: 104pc;
     position: relative;
     top: 39px;
     color: #333333;
     font-size: 25px;
+    left: 19%;
   }
-}
 .link {
   text-align: initial;
-  width: 92%;
+  width: 76%;
   border: 2px solid black;
   padding: 20px;
   margin: 43px;
+  margin-left: 18%;
   .branch {
     color: #b84217;
     font-size: 20px;
@@ -25,10 +29,11 @@
   .text {
     color: #566787;
     font-size: 15px;
+    margin-left: 55%;
   }
 }
 .date {
-  margin-left: 344px;
+  margin-left: 64%;
   margin-top: -29px;
 }
 .btn {
@@ -38,18 +43,21 @@
     color: #000000;
     background-color: #d2572a;
     padding: 5px 12px 23px;
+    margin-left: 59%;
   }
 }
 
 .BranchReport {
   text-align: initial;
-  width: 92%;
+  width: 76%;
   border: 2px solid black;
   padding: 20px;
   margin: 43px;
+  margin-left: 18%;
   .staff {
     color: #b84217;
     font-size: 20px;
     text-decoration: none;
   }
+}
 }

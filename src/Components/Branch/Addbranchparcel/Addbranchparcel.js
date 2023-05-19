@@ -1,91 +1,157 @@
-import { Typography, Form, Input, Button } from "antd";
 import React from "react";
+import { Form, Typography, Input, Select, Button } from "antd";
+import { CloseCircleOutlined } from "@ant-design/icons";
 import "./addbranchparcel.scss";
-import { Link } from "react-router-dom";
-import { CloseSquareOutlined } from "@ant-design/icons";
+import Branchdash from "../Branchdash/Branchdash";
 
 const Addbranchparcel = () => {
   return (
     <>
-      <div className="mainadd">
-        <Form className="parcel">
-          <Typography.Title className="add_title">
-            Add Parcel Detail
+      <Typography.Title className="parceldetail">
+        Add Parcel Detail
+      </Typography.Title>
+      <Form className="form1">
+        <div className="inputfield">
+          <Typography.Title className="addParagraph">
+            Sender Full Name:
           </Typography.Title>
-          <Form.Item label="Sender Full Name">
-            <Input className="input" />
-          </Form.Item>
+          <Input
+            className="input"
+            type="text"
+          />
+          <Typography.Title className="addParagraph">
+            Receiver Full Name:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Receiver Full Name">
-            <Input className="input" />
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Sender Address:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Sender Address">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Receiver Address:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Receiver Address">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Sender Contact:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Sender Contact Number">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Receiver Contact:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Receiver Contact Number">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Sender Email:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Sender Email">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Receiver Email:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Receiver Email">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Sender City:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Sender City">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Receiver City:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Receiver City">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Branch Processed
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Branch Processed">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Destination Branch
+          </Typography.Title>
+          <Select
+            placeholder="Select Branch Name"
+            className="select"
+            options={[
+              {
+                value: "Surat",
+                label: "Surat",
+              },
+              {
+                value: "Vadodara",
+                label: "Vadodara",
+              },
+              {
+                value: "Vapi",
+                label: "Vapi",
+              },
+              {
+                value: "Navsari",
+                label: "Navsari",
+              },
+            ]}
+          />
 
-          <Form.Item label="Destination Branch">
-            <Input className="input"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Weight:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Weight">
-            <Input className="input2"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Height:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Height">
-            <Input className="input2"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Width:
+          </Typography.Title>
+          <Input className="input" type="text" />
 
-          <Form.Item label="Width">
-            <Input className="input2"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Route:
+          </Typography.Title>
+          <Select
+            placeholder="Route"
+            className="select"
+            options={[
+              {
+                value: "By Road",
+                label: "By Road",
+              },
+              {
+                value: "By Air",
+                label: "By Air",
+              },
+              {
+                value: "By Train",
+                label: "By Train",
+              },
+              {
+                value: "By Ship",
+                label: "By Ship",
+              },
+            ]}
+          />
 
-          <Form.Item label="Route">
-            <Input className="input2"></Input>
-          </Form.Item>
+          <Typography.Title className="addParagraph">
+            Price:
+          </Typography.Title>
+          <Input className="input" type="text" placeholder="Get Price"/>
 
-          <Form.Item label="Price">
-            <Input className="input2"></Input>
-          </Form.Item>
-          
-          <Link className="link">
-            <CloseSquareOutlined className="close"/>
-          </Link>
+          <div className="icon">
+          <CloseCircleOutlined className="close"/>
+          </div>
+        </div>
 
-          <Button className="aparcel">Add Parcel</Button>
-        </Form>
+        <div className="link">
+          <Button className="addbtn">Add Parcel</Button>
+        </div>
+      </Form>
+      <div>
+        <Branchdash />
       </div>
     </>
   );

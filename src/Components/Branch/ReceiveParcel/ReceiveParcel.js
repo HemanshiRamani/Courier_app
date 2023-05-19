@@ -2,6 +2,7 @@ import { Typography, Table, Button } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import React from "react";
 import "./receiveparcel.scss";
+import Branchdash from "../Branchdash/Branchdash";
 const ReceiveParcel = () => {
   const columns = [
     {
@@ -63,6 +64,7 @@ const ReceiveParcel = () => {
         <div className="col">
           <Table columns={columns} />
         </div>
+        <Branchdash/>
       </div>
     </>
   );

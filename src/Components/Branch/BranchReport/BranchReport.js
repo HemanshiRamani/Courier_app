@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "./branchreport.scss";
 import { Select, Space, DatePicker } from "antd";
+import Branchdash from "../Branchdash/Branchdash";
 const BranchReport = () => {
   const handleChange = (value) => {
     console.log(`selected ${value}`);
@@ -16,7 +17,7 @@ const BranchReport = () => {
         <Typography.Title className="Reports">Reports</Typography.Title>
         <br />
         <br />
-      </div>
+      
       <div className="link">
         <Link className="branch">Branch Report</Link>
       </div>
@@ -104,7 +105,11 @@ const BranchReport = () => {
       <div className="btn">
         <Button className="parcel_report">Staff Report</Button>
       </div>
-      
+</div>
+      <div>
+      <Branchdash/>
+      </div>
+
     </>
   );
 };

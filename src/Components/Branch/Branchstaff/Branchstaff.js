@@ -2,6 +2,7 @@ import { Typography, Table, Button } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import React from "react";
 import "./branchstaff.scss";
+import Branchdash from "../Branchdash/Branchdash";
 const Branchstaff = () => {
   const columns = [
     {
@@ -52,13 +53,14 @@ const Branchstaff = () => {
   return (
     <>
       <div className="add">
-        <div className="EditBranch">
+        <div className="bs">
           <Typography.Title className="staff">Staff Details</Typography.Title>
           <Button className="btn">ADD STAFF</Button>
         </div>
         <div className="col">
           <Table columns={columns} />
         </div>
+        <Branchdash/>
       </div>
     </>
   );

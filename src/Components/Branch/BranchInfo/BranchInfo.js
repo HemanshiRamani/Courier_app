@@ -1,6 +1,7 @@
 import React from "react";
 import "./branchinfo.scss";
 import { Typography, Row, Card } from "antd";
+import Branchdash from "../Branchdash/Branchdash";
 const { Meta } = Card;
 
 const BranchInfo = () => {
@@ -54,7 +55,7 @@ const BranchInfo = () => {
           <Meta title="Delivered" description="Delivered By Staff" />
         </Card> 
         </div>
-
+        <Branchdash/>
       </div>
     </>
   );

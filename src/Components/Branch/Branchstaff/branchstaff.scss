@@ -1,24 +1,25 @@
 .add {
-    background: rgb(214, 234, 234);
-    height: 56pc;
-    padding: 10px;
-      .staff {
-        margin-right: 69%;
-        padding: 33px;
-        color: #324870;
-      }
-      .btn{
-        background-color: rgb(235, 54, 0); 
-        color: black;
-        font-size: 17px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        position: relative;
-        left: 47pc;
-        bottom: 41px;
-        padding: 13px 23px 33px;
-      }
-      .btn :hover{
-        color: white;
-      }
-    }
+  // background: rgb(214, 234, 234);
+  // height: 56pc;
+  // padding: 10px;
+  margin-left: 310px;
+  .staff {
+    margin-right: 69%;
+    padding: 33px;
+    color: #324870;
+  }
+  .btn {
+    background-color: rgb(235, 54, 0);
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    left: 85%;
+    bottom: 31px;
+    padding: 13px 23px 33px;
+  }
+  .btn :hover {
+    color: white;
+  }
+}
