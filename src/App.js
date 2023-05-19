@@ -17,16 +17,17 @@ import BranchReport from './Components/Branch/BranchReport/BranchReport';
 function App() {
   return (
     <>
-    <Routes>
-      <Route path="/" element={<Branchdash/>}/>
-      <Route path="/branchinfo" element={<BranchInfo/>}/>
-      <Route path='/bstaff' element={<Branchstaff/>}/>
-      <Route path="/viewparcel" element={<ViewParcel/>}/>
-      <Route path="/receiveparcel" element={<ReceiveParcel/>}/>
-      <Route path="/pendingparcel" element={<PendingParcel/>}/>
-      <Route path="/addbranchparcel" element={<Addbranchparcel/>}/>
-      <Route path="branchreport" element={<BranchReport/>}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Branchdash />} />
+        <Route path="/branchinfo" element={<BranchInfo />} />
+        <Route path='/bstaff' element={<Branchstaff />} />
+        <Route path="/viewparcel" element={<ViewParcel />} />
+        <Route path="/receiveparcel" element={<ReceiveParcel />} />
+        <Route path="/pendingparcel" element={<PendingParcel />} />
+        <Route path="/addbranchparcel" element={<Addbranchparcel />} />
+        <Route path="branchreport" element={<BranchReport />} />
+      </Routes>
+
     </>
   );
 }
