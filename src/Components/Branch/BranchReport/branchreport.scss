@@ -1,5 +1,5 @@
 .reportdetail {
-  background: rgb(214, 234, 234);
+  background: #dcebf5;
   padding: 10px;
   height: 56pc;
   .Reports {
@@ -17,6 +17,8 @@
   padding: 20px;
   margin: 43px;
   margin-left: 18%;
+  border-left: 5px solid ;
+  border-left: 5px solid orangered;
   .branch {
     color: #b84217;
     font-size: 20px;
@@ -45,6 +47,9 @@
     padding: 5px 12px 23px;
     margin-left: 59%;
   }
+  .parcel_report:hover{
+    color: white;
+  }
 }
 
 .BranchReport {
@@ -54,6 +59,7 @@
   padding: 20px;
   margin: 43px;
   margin-left: 18%;
+  border-left: 5px solid orangered;
   .staff {
     color: #b84217;
     font-size: 20px;

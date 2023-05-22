@@ -12,12 +12,13 @@
       .title {
         font-size: 40px;
         color: #344767;
+        margin-left: 253px;
       }
     }
     .search {
       margin-top: 46px;
       margin-bottom: 39px;
-      margin-left: 36px;
+      margin-left: 229px;
       .input {
         width: 250px;
         border: none;
@@ -41,6 +42,7 @@
       }
       .captcha_main {
         padding: 50px;
+        margin-left: -45px;
         .captcha {
             width: 250px;
             border: none;
@@ -66,22 +68,24 @@
   }
 }
 
-@media (max-width: 800px) {
-  .container {
-    position: relative;
-    width: 90%;
-    display: table;
-  }
-  .input {
-    position: relative;
-    width: 75%;
-  }
-}
-@media (min-width: 800px) and (max-width: 1448px) {
-  .container {
-    align-items: center;
-  }
-}
+
+
+// @media (max-width: 800px) {
+//   .container {
+//     position: relative;
+//     width: 90%;
+//     display: table;
+//   }
+//   .input {
+//     position: relative;
+//     width: 75%;
+//   }
+// }
+// @media (min-width: 800px) and (max-width: 1448px) {
+//   .container {
+//     align-items: center;
+//   }
+// }
 
 // .track_main{
 //     background-image: url("../../image/trackbg1.jpg");
@@ -102,10 +106,12 @@
 //         .t1{
 //             color: white;
 //             font-size: 30px;
+//             margin-left: 360px;
 //         }
 //         .t2{
 //             color: white;
 //             font-size: 30px;
+//             margin-left: 340px;
 //         }
 //         .usertrack{
 //             margin-left: 30px;
