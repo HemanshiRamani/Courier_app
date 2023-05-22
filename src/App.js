@@ -35,7 +35,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/addbranch" element={<Addbranch />} />
         <Route path="/branchtable" element={<EditBranch />} />
-        <Route path="/reportdetails" element={<ReportDetail />} />
+        <Route path='reportdetails' element={<ReportDetail/>}/>
 
       </Routes>
 

@@ -62,7 +62,6 @@ const ReportDetail = () => {
           <div className='button'>
             <Button className='preport'>Parcel Report</Button>
           </div>
-
           <Dashboard />
         </div>
       </div>
