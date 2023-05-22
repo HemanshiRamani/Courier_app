@@ -8,7 +8,7 @@ const Addbranch = () => {
 
     return (
 
-        <>
+        <>   
             <div className='Addbranch'>
                 <Form className='Form'  >
                     <Typography.Title className='title'>Add Branch Detail</Typography.Title>
