@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Divider, Form, Input, message, Typography } from "antd";
+import { Button, Divider, Form, Input, Typography } from "antd";
 import {
   FacebookFilled,
   GoogleOutlined,
@@ -8,22 +8,19 @@ import {
 import "./login.scss";
 
 const Login = () => {
-  const loginForm = () => {
-    message.success("Login Successfully...!!");
-  };
   return (
     <div className="login">
-      <Form className="form" onFinish={loginForm}>
+      <Form className="form">
         <Typography.Title className="loginhere">Login here</Typography.Title>
 
         <Form.Item
-          rules={[
-            {
-              required: true,
-              type: "username",
-              message: "Please enter valid user name",
-            },
-          ]}
+          // rules={[
+          //   {
+          //     required: true,
+          //     type: "username",
+          //     message: "Please enter valid user name",
+          //   },
+          // ]}
           label="UserName"
           name={"UserName"}
         >
@@ -31,13 +28,13 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item
-          rules={[
-            {
-              required: true,
-              type: "password",
-              message: "Please enter valid password",
-            },
-          ]}
+          // rules={[
+          //   {
+          //     required: true,
+          //     type: "password",
+          //     message: "Please enter valid password",
+          //   },
+          // ]}
           label="Password"
           name={"Password"}
         >

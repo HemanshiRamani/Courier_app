@@ -16,6 +16,7 @@ import Dashboard from './Components/Admin/Dashboard/Dashboard';
 import Addbranch from "./Components/Admin/Addbranch/Addbranch";
 import EditBranch from './Components/EditBranch/EditBranch';
 import ReportDetail from "./Components/Admin/ReportDetail/ReportDetail";
+import Home from './Components/Home/Home';
  
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         
 
         <Route path="/login" element={<Login/>}/>
+        <Route path="/home" element={<Home/>}/>
 
         <Route path="/user" element={<Landingpage/>}/>
         <Route path="usertrackparcel" element={<Usertrackparcel/>}/>
