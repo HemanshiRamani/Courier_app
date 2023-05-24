@@ -15,7 +15,7 @@ const AdminLogin = () => {
   const [password, setPassword] = useState("");
   return (
     <div className="login">
-      <Form className="form"></Form>
+      <Form className="form">
         <Typography.Text className="admin">Admin Login</Typography.Text>
         <Typography.Title className="loginhere">Login here</Typography.Title>
 
