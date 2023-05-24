@@ -6,11 +6,16 @@ import {
   TwitterOutlined,
 } from "@ant-design/icons";
 import "./login.scss";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const AdminLogin = () => {
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="login">
-      <Form className="form">
+      <Form className="form"></Form>
         <Typography.Text className="admin">Admin Login</Typography.Text>
         <Typography.Title className="loginhere">Login here</Typography.Title>
 
@@ -25,7 +30,12 @@ const AdminLogin = () => {
           label="UserName"
           name={"UserName"}
         >
-          <Input placeholder="Enter User Name" className="forminput"></Input>
+          <Input
+            placeholder="Enter User Name"
+            className="forminput"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          ></Input>
         </Form.Item>
 
         <Form.Item
@@ -39,7 +49,11 @@ const AdminLogin = () => {
           label="Password"
           name={"Password"}
         >
-          <Input.Password placeholder="Enter Password"></Input.Password>
+          <Input.Password
+            placeholder="Enter Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></Input.Password>
         </Form.Item>
 
         <Button type="primary" htmlType="submit" block>
