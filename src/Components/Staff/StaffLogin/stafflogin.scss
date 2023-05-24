@@ -1,0 +1,57 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg");
+    background-size: cover;
+    .form{
+        background-color: rgba(255, 255, 255, 0.33);
+        box-shadow: 0px 8px 32px 0 rgba(0, 0, 255, 0.33);
+        backdrop-filter: blur(3px);
+        padding: 28px 133px 61px 122px;
+        border-radius: 16px;
+        .staff{
+            font-size: 30px;
+            font-weight: 500;
+            margin-left: 40px;
+            // border: 2px solid;
+            // padding: 3px 20px 7px 11px;
+        }
+        .loginhere{
+            position: relative;
+            bottom: 26px;
+            margin-left: 40px;
+        }
+        >label {
+            font-size: 20px;
+        }
+        .forminput{
+            margin-bottom: 20px;
+        }
+        .divider{
+            border-color: black;
+            font-size: 20px;
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            color: white;
+            font-size: 24px;
+        }
+        .GoogleOutlined{
+            color: red;
+            cursor: pointer;
+        }
+        .FacebookFilled{
+            color: blue;
+            @extend .GoogleOutlined
+        }
+        .TwitterOutlined{
+            color: rgb(48, 164, 164);
+            @extend .GoogleOutlined
+        }
+    }
+}
