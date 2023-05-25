@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100w;
+    width: 100vw;
     height: 100vh;
     background: rgb(222, 231, 231);
     background-size: cover;
@@ -22,10 +22,9 @@
         .title {
             position: relative;
             bottom: 61px;
-            right: 56px;
+            // right: 56px;
             color: #344767;
-            font-size: 35
-            px
+            font-size: 35px;
         }
         .list {
             right: 283px;

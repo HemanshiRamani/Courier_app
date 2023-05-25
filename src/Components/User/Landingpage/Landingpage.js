@@ -47,7 +47,7 @@ const Landingpage = () => {
 
         <div className="landing3">
           <div className="second">
-          <Link className="track">Track Your Parcel</Link>
+          <Link to="/usertrackparcel" className="track">Track Your Parcel</Link>
           </div>
         </div>
       </div>

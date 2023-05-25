@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route,} from 'react-router-dom';
+import { Routes, Route,} from 'react-router-dom';
 import Branchdash from './Components/Branch/Branchdash/Branchdash';
 import BranchInfo from './Components/Branch/BranchInfo/BranchInfo';
 import Branchstaff from './Components/Branch/Branchstaff/Branchstaff';
@@ -15,6 +15,7 @@ import Addbranch from "./Components/Admin/Addbranch/Addbranch";
 import EditBranch from './Components/EditBranch/EditBranch';
 import ReportDetail from "./Components/Admin/ReportDetail/ReportDetail";
 import Home from './Components/Home/Home';
+import AddBranchStaff from './Components/Branch/AddBranchStaff/AddBranchStaff';
  
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/pendingparcel" element={<PendingParcel />} />
         <Route path="/addbranchparcel" element={<Addbranchparcel />} />
         <Route path="branchreport" element={<BranchReport />} />
+        <Route path="/branchstaff" element={<AddBranchStaff/>}/>
  
         <Route path="dashboard" element={<Dashboard/>}/>
         <Route path="/addbranch" element={<Addbranch/>}/>
@@ -39,7 +41,7 @@ function App() {
         <Route path="/login" element={<Home/>}/>
 
         <Route path="/user" element={<Landingpage/>}/>
-        <Route path="usertrackparcel" element={<Usertrackparcel/>}/>
+        <Route path="/usertrackparcel" element={<Usertrackparcel/>}/>
  
       </Routes>
 

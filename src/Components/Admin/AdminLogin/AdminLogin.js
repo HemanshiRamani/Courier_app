@@ -5,17 +5,77 @@ import {
   GoogleOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
-import "./login.scss";
+import "./adminlogin.scss";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Axios from 'axios';
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const AdminLogin = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate();     
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [err, setErr] = useState({});
+
+  const Login = (e) => {
+    console.log("status:", username);
+    console.log("password:", password);
+
+    e.preventDefault();
+    Axios.post("http://localhost:8000/login", { username, password })
+      .then((res) => {
+        console.log("status:", res);
+        if (res.status === 200) {
+          navigate("/dashboard");
+          window.location.reload();
+          toast.success(
+            "Login successfully...",
+            { autoClose: 1000 },
+            {
+              position: "top-center",
+            }
+          );
+          localStorage.setItem("token", `Bearer ${res.data.token}`);
+        }
+      })
+      .catch((error) => {
+        console.log("error:", error);
+        toast.error("Invalid Details", {
+          position: "top-center",
+        });
+      });
+  };
+
+  const validation = () => {
+    const err = {};
+    let isValid = true;
+    if (!username) {
+      err.username = "Please Enter UserName";
+      isValid = false;
+    }
+    if (!password) {
+      err.password = "Please Enter Password";
+      isValid = false;
+    }
+
+    setErr(err);
+    return isValid;
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    const isValid = validation();
+    console.log(isValid);
+    if (isValid) {
+      Login(e);
+    }
+  };
+
   return (
     <div className="login">
-      <Form className="form">
+      <Form method="POST" className="form">
         <Typography.Text className="admin">Admin Login</Typography.Text>
         <Typography.Title className="loginhere">Login here</Typography.Title>
 
@@ -37,6 +97,7 @@ const AdminLogin = () => {
             onChange={(e) => setUsername(e.target.value)}
           ></Input>
         </Form.Item>
+        <Typography.Text className="err">{err["username"]}</Typography.Text>
 
         <Form.Item
           // rules={[
@@ -55,8 +116,9 @@ const AdminLogin = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></Input.Password>
         </Form.Item>
+        <Typography.Text className="err">{err["password"]}</Typography.Text>
 
-        <Button type="primary" htmlType="submit" block>
+        <Button onClick={submit} type="primary" htmlType="submit" block>
           Login
         </Button>
 

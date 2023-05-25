@@ -3,6 +3,8 @@ import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import React from "react";
 import "./branchstaff.scss";
 import Branchdash from "../Branchdash/Branchdash";
+import { Link } from "react-router-dom";
+
 const Branchstaff = () => {
   const columns = [
     {
@@ -55,7 +57,7 @@ const Branchstaff = () => {
       <div className="add">
         <div className="bs">
           <Typography.Title className="staff">Staff Details</Typography.Title>
-          <Button className="btn">ADD STAFF</Button>
+          <Link to="/branchstaff"><Button className="btn">ADD STAFF</Button></Link>
         </div>
         <div className="col">
           <Table columns={columns} />
