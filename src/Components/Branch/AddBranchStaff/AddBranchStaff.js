@@ -22,11 +22,12 @@ const AddBranchStaff = () => {
     contactnumber: " ",
   });
 
+
   const handlechange = (e) => {
     const newStaff = { ...staff };
     newStaff[e.target.id] = e.target.value;
     setStaff(newStaff);
-    console.log(newStaff);
+    
 
     // const { name, value } = e.target;
     // console.log(name, value);
@@ -43,7 +44,7 @@ const AddBranchStaff = () => {
         headers: { authorization: getToken },
       }).then((res) => {
         const branchname = res.data.userValid.branchname;
-        setBranchname(res.data.userValid.branchname);
+        setBranchname(branchname);
       });
     }
   }, []);
@@ -70,6 +71,7 @@ const AddBranchStaff = () => {
 
     axios.post("http://localhost:8000/addstaff", staffdata)
       .then((res) => {
+        console.log("response",res);
         if (res.status === 200) {
           toast.success(
             "Data Added Successfully...",
