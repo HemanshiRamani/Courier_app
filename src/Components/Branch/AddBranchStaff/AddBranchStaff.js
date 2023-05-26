@@ -12,7 +12,7 @@ const AddBranchStaff = () => {
   const [data, setData] = useState([]);
   const [branchname, setBranchname] = useState([]);
   const [err, setErr] = useState({});
-  const [isEdit, setisEdit] = useState(false);
+  // const [isEdit, setisEdit] = useState(false);
   const [staff, setStaff] = useState({
     staffname: " ",
     staffemail: " ",
@@ -22,32 +22,11 @@ const AddBranchStaff = () => {
     contactnumber: " ",
   });
 
-
   const handlechange = (e) => {
     const newStaff = { ...staff };
     newStaff[e.target.id] = e.target.value;
     setStaff(newStaff);
-    
-
-    // const { name, value } = e.target;
-    // console.log(name, value);
-    // console.log(e);
-    // setStaff({
-    //   ...staff,
-    //   [name]: value,
-    // });
   };
-
-  useEffect(() => {
-    if (getToken) {
-      axios.get("http://localhost:8000/bloggedin", {
-        headers: { authorization: getToken },
-      }).then((res) => {
-        const branchname = res.data.userValid.branchname;
-        setBranchname(branchname);
-      });
-    }
-  }, []);
 
   const AddData = (e) => {
     e.preventDefault();
@@ -98,41 +77,10 @@ const AddBranchStaff = () => {
     });
   };
 
-  const url = window.location.href;
-  const id = url.substring(url.lastIndexOf('/') + 1);
-  useEffect(() => {
-      if (id) {
-          axios.get(`http://localhost:8000/editstaffdata/${id}`)
-              .then((res) => {
-                  console.log("data:", res.data.staffData)
-                  setStaff(res.data.staffData)
-                  setisEdit(!isEdit);
-              })
-      }
-  }, [])
-
-  const editData = (e) => {
-      e.preventDefault();
-      const { staffname, staffemail, branchname, staffaddress, city, contactnumber } = staff;
-      const staffdata = { staffname, staffemail, branchname, staffaddress, city, contactnumber };
-      axios.put(`http://localhost:8000/updateStaffData/${id}`, staffdata)
-          .then((res) => {
-              if (res.status === 200) {
-                  toast.success("Updated Successfully..", { autoClose: 1000 }
-                      , {
-                          position: "top-center",
-                      })
-              }
-          })
-          .catch((error) => {
-              toast.error("Fail To Update Data", {
-                  position: "top-center",
-              })
-          })
-  }
   const validation = () => {
       const err = {};
       let isValid = true;
+      //staffname
       if (!staff.staffname || staff.staffname === " "){
           err.staffname = "Field Cant Not Be Empty";
           isValid = false;
@@ -146,13 +94,27 @@ const AddBranchStaff = () => {
       else {
           console.log("no data")
       }
-      //Adress Validation
+
+      //branchname
+      if(!staff.branchname || staff.branchname === " "){
+        err.branchname = "Field Can Not be Empty";
+        isValid = false;
+      }
+      else if(typeof staff.branchname !== "undefined"){
+        if(!staff.branchname.match(/^[a-zA-Z-, ]+$/)){
+          err.branchname = "Please Enter Only Letter";
+          isValid = false;
+        }
+      }
+
+      
+      //Adress
       if (!staff.staffaddress || staff.staffaddress === " ") {
           err.staffaddress = "Field Can-Not Be Empty";
           isValid = false;
       }
       //Contact
-      if (!staff.contactnumber) {
+      if (!staff.contactnumber || staff.contactnumber === " ") {
           err.contactnumber = "Field Cant Not Be Empty";
           isValid = false;
       }
@@ -165,7 +127,8 @@ const AddBranchStaff = () => {
       else {
           console.log("no data")
       }
-      //Email Address
+
+      //Email 
       if (!staff.staffemail || staff.staffemail === " ") {
           err.staffemail = "Field Cant Not Be Empty";
           isValid = false;
@@ -176,6 +139,7 @@ const AddBranchStaff = () => {
             isValid = false;
           }
         }
+
       //City
       if (!staff.city || staff.city === " ") {
           err.city = "Field Cant Not Be Empty";
