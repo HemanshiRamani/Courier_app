@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+
+import React, { useState } from "react";
 import "./addbranchstaff.scss";
 import { Link } from "react-router-dom";
 import { Form, Input, Typography, List, Button, Image } from "antd";
 import home from "../../image/home.png";
 import "react-toastify/dist/ReactToastify.css";
-import axios from 'axios';  
-import { getToken } from "../../Services/getToken";
+import axios from 'axios';
 import { toast } from "react-toastify";
 
+
 const AddBranchStaff = () => {
-  const [data, setData] = useState([]);
-  const [branchname, setBranchname] = useState([]);
+  // const [data, setData] = useState([]);
+  // const [branchname, setBranchname] = useState([]);
   const [err, setErr] = useState({});
   // const [isEdit, setisEdit] = useState(false);
   const [staff, setStaff] = useState({
@@ -21,13 +22,11 @@ const AddBranchStaff = () => {
     city: " ",
     contactnumber: " ",
   });
-
   const handlechange = (e) => {
     const newStaff = { ...staff };
     newStaff[e.target.id] = e.target.value;
     setStaff(newStaff);
   };
-
   const AddData = (e) => {
     e.preventDefault();
     const {
@@ -38,7 +37,6 @@ const AddBranchStaff = () => {
       city,
       contactnumber,
     } = staff;
-
     const staffdata = {
       staffname: staffname.trim(),
       staffemail,
@@ -47,10 +45,9 @@ const AddBranchStaff = () => {
       city,
       contactnumber,
     };
-
     axios.post("http://localhost:8000/addstaff", staffdata)
       .then((res) => {
-        console.log("response",res);
+        console.log("response", res);
         if (res.status === 200) {
           toast.success(
             "Data Added Successfully...",
@@ -66,7 +63,6 @@ const AddBranchStaff = () => {
           position: "top-center",
         });
       });
-
     setStaff({
       staffname: " ",
       staffemail: " ",
@@ -76,97 +72,88 @@ const AddBranchStaff = () => {
       contactnumber: " ",
     });
   };
-
   const validation = () => {
-      const err = {};
-      let isValid = true;
-      //staffname
-      if (!staff.staffname || staff.staffname === " "){
-          err.staffname = "Field Cant Not Be Empty";
-          isValid = false;
-      }
-      else if (typeof staff.staffname !== "undefined") {
-          if (!staff.staffname.match(/^[a-zA-Z-, ]+$/)) {
-              err.staffname = "Please Enter Only Letter";
-              isValid = false;
-          }
-      }
-      else {
-          console.log("no data")
-      }
-
-      //branchname
-      if(!staff.branchname || staff.branchname === " "){
-        err.branchname = "Field Can Not be Empty";
+    const err = {};
+    let isValid = true;
+    //staffname
+    if (!staff.staffname || staff.staffname === " ") {
+      err.staffname = "Field Cant Not Be Empty";
+      isValid = false;
+    }
+    else if (typeof staff.staffname !== "undefined") {
+      if (!staff.staffname.match(/^[a-zA-Z-, ]+$/)) {
+        err.staffname = "Please Enter Only Letter";
         isValid = false;
       }
-      else if(typeof staff.branchname !== "undefined"){
-        if(!staff.branchname.match(/^[a-zA-Z-, ]+$/)){
-          err.branchname = "Please Enter Only Letter";
-          isValid = false;
-        }
+    }
+    else {
+      console.log("no data")
+    }
+    //branchname
+    if (!staff.branchname || staff.branchname === " ") {
+      err.branchname = "Field Can Not be Empty";
+      isValid = false;
+    }
+    else if (typeof staff.branchname !== "undefined") {
+      if (!staff.branchname.match(/^[a-zA-Z-, ]+$/)) {
+        err.branchname = "Please Enter Only Letter";
+        isValid = false;
       }
-
-      
-      //Adress
-      if (!staff.staffaddress || staff.staffaddress === " ") {
-          err.staffaddress = "Field Can-Not Be Empty";
-          isValid = false;
+    }
+    //Adress
+    if (!staff.staffaddress || staff.staffaddress === " ") {
+      err.staffaddress = "Field Can-Not Be Empty";
+      isValid = false;
+    }
+    //Contact
+    if (!staff.contactnumber || staff.contactnumber === " ") {
+      err.contactnumber = "Field Cant Not Be Empty";
+      isValid = false;
+    }
+    else if (typeof staff.contactnumber !== "undefined") {
+      if (!staff.contactnumber.match(/^\d{10}$/)) {
+        err.contactnumber = "Please Enter 10 Digit";
+        isValid = false;
       }
-      //Contact
-      if (!staff.contactnumber || staff.contactnumber === " ") {
-          err.contactnumber = "Field Cant Not Be Empty";
-          isValid = false;
+    }
+    else {
+      console.log("no data")
+    }
+    //Email
+    if (!staff.staffemail || staff.staffemail === " ") {
+      err.staffemail = "Field Cant Not Be Empty";
+      isValid = false;
+    }
+    else if (typeof staff.staffemail !== "undefined") {
+      if (!staff.staffemail.match('[a-z0-9]+@[a-z]+\.[a-z]{2,3}')) {
+        err.staffemail = "Enter Email in Proper Format";
+        isValid = false;
       }
-      else if (typeof staff.contactnumber !== "undefined") {
-          if (!staff.contactnumber.match(/^\d{10}$/)) {
-              err.contactnumber = "Please Enter 10 Digit";
-              isValid = false;
-          }
+    }
+    //City
+    if (!staff.city || staff.city === " ") {
+      err.city = "Field Cant Not Be Empty";
+      isValid = false;
+    }
+    else if (typeof staff.city !== "undefined") {
+      if (!staff.city.match(/^[a-zA-Z-, ]+$/)) {
+        err.city = "Please Enter Only Letter";
+        isValid = false;
       }
-      else {
-          console.log("no data")
-      }
-
-      //Email 
-      if (!staff.staffemail || staff.staffemail === " ") {
-          err.staffemail = "Field Cant Not Be Empty";
-          isValid = false;
-        }
-        else if (typeof staff.staffemail !== "undefined") {
-          if (!staff.staffemail.match('[a-z0-9]+@[a-z]+\.[a-z]{2,3}')) {
-            err.staffemail = "Enter Email in Proper Format";
-            isValid = false;
-          }
-        }
-
-      //City
-      if (!staff.city || staff.city === " ") {
-          err.city = "Field Cant Not Be Empty";
-          isValid = false;
-      }
-      else if (typeof staff.city !== "undefined") {
-          if (!staff.city.match(/^[a-zA-Z-, ]+$/)) {
-              err.city = "Please Enter Only Letter";
-              isValid = false;
-          }
-      }
-      else {
-          console.log("no data")
-      }
-      
-      setErr(err);
-      return isValid;
+    }
+    else {
+      console.log("no data")
+    }
+    setErr(err);
+    return isValid;
   }
-
   const onsubmit = (e) => {
-      e.preventDefault();
-      const isValid = validation();
-      if (isValid) {
-          AddData(e);
-      }
+    e.preventDefault();
+    const isValid = validation();
+    if (isValid) {
+      AddData(e);
+    }
   }
-
   return (
     <>
       <div className="add_staff">
@@ -179,7 +166,6 @@ const AddBranchStaff = () => {
           <Typography.Title className="title">
             Add Staff Detail
           </Typography.Title>
-
           <List className="list">
             <Form.Item className="staffname" label="Staff Name">
               <Input
@@ -191,11 +177,10 @@ const AddBranchStaff = () => {
                 required
               />
             </Form.Item>
-            <Typography.Text  style={{color : "red"}}>
+            <Typography.Text style={{ color: "red" }}>
               {err["staffname"]}
             </Typography.Text>
           </List>
-
           <List className="li">
             <Form.Item label="Staff E-Mail" className="staff_email">
               <Input
@@ -207,11 +192,10 @@ const AddBranchStaff = () => {
                 required
               />
             </Form.Item>
-            <Typography.Text  style={{color : "red"}}>
+            <Typography.Text style={{ color: "red" }}>
               {err["staffemail"]}
             </Typography.Text>
           </List>
-
           <List className="bname">
             <Form.Item label="Branch Name" className="branch_name">
               <Input
@@ -223,11 +207,10 @@ const AddBranchStaff = () => {
                 required
               />
             </Form.Item>
-            <Typography.Text  style={{color : "red"}}>
+            <Typography.Text style={{ color: "red" }}>
               {err["branchname"]}
             </Typography.Text>
           </List>
-
           <List className="address">
             <Form.Item label="Staff Address" className="staff_address">
               <Input
@@ -239,11 +222,10 @@ const AddBranchStaff = () => {
                 required
               />
             </Form.Item>
-            <Typography.Text  style={{color : "red"}}>
+            <Typography.Text style={{ color: "red" }}>
               {err["staffaddress"]}
             </Typography.Text>
           </List>
-
           <List className="scity">
             <Form.Item label="City" className="City">
               <Input
@@ -255,9 +237,8 @@ const AddBranchStaff = () => {
                 required
               />
             </Form.Item>
-            <Typography.Text  style={{color : "red"}}>{err["city"]}</Typography.Text>
+            <Typography.Text style={{ color: "red" }}>{err["city"]}</Typography.Text>
           </List>
-
           <List className="contact">
             <Form.Item label="Staff Contact Number" className="snumber">
               <Input
@@ -269,11 +250,10 @@ const AddBranchStaff = () => {
                 required
               />
             </Form.Item>
-            <Typography.Text style={{color : "red"}} className="err">
+            <Typography.Text style={{ color: "red" }} className="err">
               {err["contactnumber"]}
             </Typography.Text>
           </List>
-
           <List className="button">
             <Button onClick={onsubmit} type="submit" className="btn">
               Add Staff
