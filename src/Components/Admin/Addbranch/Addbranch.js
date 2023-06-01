@@ -41,7 +41,7 @@ const Addbranch = () => {
             city,
             zipcode,
         };
-        axios.post("http://localhost:8000/addbranch", testdata)
+        axios.post("http://localhost:8000/addbranch",testdata)
             .then((res) => {
                 console.log("response", res)
                 if (res.status === 200) {
@@ -98,7 +98,7 @@ const Addbranch = () => {
                 isValid = false;
             }
             else if (typeof test.branchcontactnumber !== "undefined") {
-                if (!test.branchcontactnumber.match(/^\d{10}$/ )) {
+                if (!test.branchcontactnumber.match(/^\d{10}$/)) {
                     err.branchcontactnumber = "Please Enter 10 Digit";
                     isValid = false;
                 }
@@ -112,7 +112,7 @@ const Addbranch = () => {
                 isValid = false;
             }
             else if (typeof test.branchemail !== "undefined") {
-                if (!test.branchemail.match('/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;')) {
+                if (!test.branchemail.match('[a-z0-9]+@[a-z]+[a-z]{2,3}')) {
                     err.branchemail = "Enter Email in Proper Format";
                     isValid = false;
                 }
@@ -135,7 +135,7 @@ const Addbranch = () => {
             }
             else if (typeof test.zipcode !== "undefined") {
                 if (!test.zipcode.match(/(^\d{5}$)|(^\d{5}-\d{4}$)/)) {
-                    err.zipcode = "Please Enter Only "
+                    err.zipcode = "Please Enter Digit";
                 }
             }
             else {
@@ -147,8 +147,8 @@ const Addbranch = () => {
     }
     const add = (e) => {
         e.preventDefault();
-   const isValid = validation();
-   if (isValid){      
+        const isValid = validation();
+        if (isValid) {
             AddData(e);
         }
     }
@@ -170,7 +170,7 @@ const Addbranch = () => {
                                 className='input'
                             />
                         </Form.Item>
-                        <Typography.Text style={{color: "red"}}>
+                        <Typography.Text style={{ color: "red" }}>
                             {err["branchname"]}
                         </Typography.Text>
                     </List>
@@ -184,7 +184,7 @@ const Addbranch = () => {
                                 type='text'
                                 className='input'
                             />
-                            <Typography.Text style={{color: "red"}}>
+                            <Typography.Text style={{ color: "red" }}>
                                 {err["branchaddress"]}
                             </Typography.Text>
                         </Form.Item>
@@ -200,8 +200,8 @@ const Addbranch = () => {
                                 className='input'
                             />
                         </Form.Item>
-                        <Typography.Text style={{color:"red"}}>
-                          {err["branchcontactnumber"]}
+                        <Typography.Text style={{ color: "red" }}>
+                            {err["branchcontactnumber"]}
                         </Typography.Text>
                     </List>
 

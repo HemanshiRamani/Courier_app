@@ -67,7 +67,7 @@ const BranchLogin = () => {
 
   return (
     <div className="login">
-      <Form method="POST" className="form">
+      <Form method="POST" className="form" to="/dashboard">
         <Typography.Text className="admin">Branch Login</Typography.Text>
         <Typography.Title className="loginhere">Login here</Typography.Title>
 
@@ -92,13 +92,7 @@ const BranchLogin = () => {
         <Typography.Text className="err">{err["username"]}</Typography.Text>
 
         <Form.Item
-          // rules={[
-          //   {
-          //     required: true,
-          //     type: "password",
-          //     message: "Please enter valid password",
-          //   },
-          // ]}
+       
           label="Password"
           name={"Password"}
         >
