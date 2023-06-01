@@ -10,10 +10,7 @@ import { toast } from "react-toastify";
 
 
 const AddBranchStaff = () => {
-  // const [data, setData] = useState([]);
-  // const [branchname, setBranchname] = useState([]);
   const [err, setErr] = useState({});
-  // const [isEdit, setisEdit] = useState(false);
   const [staff, setStaff] = useState({
     staffname: " ",
     staffemail: " ",
@@ -178,7 +175,7 @@ const AddBranchStaff = () => {
               />
             </Form.Item>
             <Typography.Text style={{ color: "red" }}>
-              {err["staffname"]}
+              {err["staffname"]} 
             </Typography.Text>
           </List>
           <List className="li">
@@ -202,6 +199,7 @@ const AddBranchStaff = () => {
                 type="text"
                 className="input"
                 id="branchname"
+                
                 value={staff.branchname}
                 onChange={(e) => handlechange(e)}
                 required

@@ -16,7 +16,7 @@ import EditBranch from './Components/EditBranch/EditBranch';
 import ReportDetail from "./Components/Admin/ReportDetail/ReportDetail";
 import Home from './Components/Home/Home';
 import AddBranchStaff from './Components/Branch/AddBranchStaff/AddBranchStaff';
- 
+import StaffHome from "./Components/Staff/ StaffHome/ StaffHome";
 
 function App() {
   return (
@@ -42,7 +42,9 @@ function App() {
 
         <Route path="/user" element={<Landingpage/>}/>
         <Route path="/usertrackparcel" element={<Usertrackparcel/>}/>
- 
+         
+
+         <Route path="/staffhome" element={<StaffHome/>}/>
       </Routes>
 
     </>
